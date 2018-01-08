@@ -1,0 +1,52 @@
+<html>
+<head>
+    <style>
+        divider {
+            color: #f4f4f4;
+            font-size: large;
+        }
+
+        #graphBtn {
+            font-size: medium;
+        }
+
+        #graphContainer{
+            display: inline-block;
+        }
+
+        .menu {
+            font-size: medium;
+        }
+
+    </style>
+    <title>sample page for avital</title>
+</head>
+<body>
+<h1>This is a sample page for avital</h1>
+<hr color="#f9fbff">
+<div class="selection" id="numberOfMovies">
+    <select class="menu" onchange="setNumberOfMovies(this)">
+        <option value="">select number of movies</option>
+        <option value="10">10</option>
+        <option value="100">100</option>
+        <option value="1000">1000</option>
+        <option value="7000">maximum</option>
+    </select>
+    <divider>|</divider>
+    <select class="menu" onchange="setMovieRole(this)">
+        <option value="">select movie role</option>
+        <option value="actor">actor</option>
+        <option value="director">director</option>
+        <option value="producer">producer</option>
+    </select>
+    <divider>|</divider>
+    <button type="button" id="graphBtn" onclick="buildGraph()">go!</button>
+</div>
+<hr color="#f9fbff">
+<div id="graphContainer">
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="chartjs/Chart.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
